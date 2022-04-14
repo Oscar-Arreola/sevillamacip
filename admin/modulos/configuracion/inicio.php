@@ -63,12 +63,12 @@ $archivoes[] = array(
 /*$archivoes[] = array(
 	  'title' => 'Respaldos',
     'archivo' => 'respaldar',
-	   'icon' => 'server');
+	   'icon' => 'server');*/
 
 $archivoes[] = array(
 	  'title' => 'Slider',
     'archivo' => 'slider',
-	   'icon' => 'images');*/
+	   'icon' => 'images');
 
 $archivoes[] = array(
 	  'title' => 'Usuarios',

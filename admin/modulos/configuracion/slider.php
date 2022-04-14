@@ -160,8 +160,8 @@ echo '
 				echo '
 					<a href="javascript:borrarfoto(\''.$file.'\',\''.$id.'\')" class="uk-icon-button uk-button-danger" uk-icon="trash"></a>
 					<br><br>
-					<a href="'.$rutaSlider.$rowConsulta['id'].'.jpg" target="_blank">
-						<img src="'.$rutaSlider.$rowConsulta['id'].'.jpg" class="img-responsive uk-border-rounded margen-bottom-20">
+					<a href="'.$rutaSlider.$rowConsulta['imagen'].'" target="_blank">
+						<img src="'.$rutaSlider.$rowConsulta['imagen'].'" class="img-responsive uk-border-rounded margen-bottom-20">
 					</a>
 
 					<form action="" method="post">	
@@ -171,9 +171,6 @@ echo '
 						</div>
 						<div class="uk-width-expand uk-margin">				
 							<textarea class="uk-input" style="height: 200px; "name="texto" data-tabla="carousel" data-campo="txt" data-id="1" value="'.$rowConsulta['txt'].'" placeholder="texto">'.$rowConsulta['txt'].'</textarea>
-						</div>
-						<div class="uk-width-expand">
-							<input type="text" name="url" class="uk-input" data-tabla="carousel" data-campo="url" data-id="1" value="'.$rowConsulta['url'].'" placeholder="Url">
 						</div>
 						<div class="uk-width-auto">
 							<button class="uk-button uk-button-primary">Agregar</button>
@@ -218,7 +215,7 @@ $scripts='
 		fileName:"myfile",
 		maxFileCount:1,
 		showDelete: "false",
-		allowedTypes: "jpeg,jpg",
+		allowedTypes: "jpeg,jpg,png",
 		maxFileSize: 6291456,
 		showFileCounter: false,
 		showPreview:false,

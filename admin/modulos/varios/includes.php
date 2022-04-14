@@ -15,10 +15,10 @@ $navegacion[] = array(
 	 'modulo' => 'configuracion',
 	   'icon' => 'cog');
 
-/*$navegacion[] = array(
+$navegacion[] = array(
 	  'title' => 'empresas distribuidoras',
 	 'modulo' => 'empresas',
-	   'icon' => 'copyright');*/
+	   'icon' => 'copyright');
 
 $navegacion[] = array(
 	  'title' => 'clientes',
@@ -29,6 +29,12 @@ $navegacion[] = array(
 	  'title' => 'galerías',
 	 'modulo' => 'galerias',
 	   'icon' => 'border-all');
+
+$navegacion[] = array(
+		'title' => 'Servicios',
+	   'modulo' => 'servicios',
+		 'icon' => 'border-all');
+  
 
 /*$navegacion[] = array(
 	  'title' => 'Imágenes',

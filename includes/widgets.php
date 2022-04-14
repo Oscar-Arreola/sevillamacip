@@ -384,7 +384,7 @@
       if ($numPics>0) {
         echo '
             <!-- Start Carousel -->
-            <div uk-slideshow="autoplay:true; autoplay-interval: 4000;animation:'.$animation.';min-height:'.$row_CONSULTA['sliderhmin'].';" class="uk-grid-collapse" uk-grid style="z-index: -1">
+            <div uk-slideshow="autoplay:true; autoplay-interval: 4000;animation:'.$animation.';max-height:'.$row_CONSULTA['sliderhmin'].';" class="uk-grid-collapse" uk-grid style="z-index: -1">
               <div class="uk-visible-toggle uk-width-1-1">
                 <div class="uk-position-relative">
                   <ul class="uk-slideshow-items">';
@@ -423,12 +423,22 @@
                         echo '
                           
                         <li>
-                            <img src="img/contenido/'.$carousel.'/'.$row_CAROUSEL['imagen'].'" uk-cover>
-                            <div class="uk-position-top-left uk-position-small">
-                            <img class="img-slider-pri" src="img/design/logo.png" uk-img>
-                                
-
-                            </div>
+                          <div class="uk-container-expand bg-secondary">
+                            <div class="padding-h-40 padding-top-40">
+                              <div class="uk-grid uk-margin-remove border-u-inver padding-40" style="padding-bottom: 11em">
+                                <div class="uk-width-1-2@m uk-width-1-1 uk-flex uk-flex-middle">
+                                  <div>
+                                    <h1 class="uk-text-uppercase color-primary uk-text-bold text-xxl">'.$row_CAROUSEL['titulo'].'</h1>
+                                    <p>'.$row_CAROUSEL['txt'].'</p>
+                                    <div class="border-50"></div>
+                                  </div>
+                                </div>
+                                <div class="uk-width-1-2@m uk-width-1-1">
+                                  <img src="img/contenido/'.$carousel.'/'.$row_CAROUSEL['imagen'].'">
+                                </div>
+                              </div>
+                            <div>
+                          </div>
                         </li>';
                       }
                     }

@@ -42,11 +42,11 @@
 						<input type="text" class="uk-input" name="sku" autofocus required>
 					</div>-->
 					<div>
-						<label for="titulo">Modelo</label>
+						<label for="titulo">Titulo</label>
 						<input type="text" class="uk-input" name="titulo" required>
 					</div>
 
-					<div>
+					<!--<div>
 						<label for="categoria">Categoría y subcategoría</label>
 						<div>
 							<select name="categoria" data-placeholder="Seleccione una" class="chosen-select uk-select" required>
@@ -83,7 +83,7 @@
 									echo '
 							</select>
 						</div>
-					</div>
+					</div>-->
 
 					<!--<div>
 						<label for="marca">Marca</label>
@@ -104,7 +104,7 @@
 							</select>
 						</div>
 					</div>-->
-					<div>
+					<!--<div>
 						<label for="tipotalla">Tipo de talla</label>
 						<div>
 							<select name="tipotalla" data-placeholder="Seleccione una" class="chosen-select uk-select" required>
@@ -122,12 +122,12 @@
 								echo '
 							</select>
 						</div>
-					</div>
+					</div>-->
 
 					
 				</div>
 
-				<div uk-grid class="uk-grid-small uk-child-width-1-3@s">
+				<!--<div uk-grid class="uk-grid-small uk-child-width-1-3@s">
 			
 					<div>
 						<label for="precio">Precio de lista</label>
@@ -148,11 +148,11 @@
 						<label for="descuento">Descuento</label>
 						<input type="text" class="uk-input input-number-deci descuento" name="descuento" value="0" min="0" max="100" required>
 					</div>
-				</div>
+				</div>-->
 
 
 				<div uk-grid class="uk-grid-small uk-child-width-1-1@s">
-				<label for="palabras_clave">Palabras clave: <span id="claves_txt"> </span></label>
+				<!--<label for="palabras_clave">Palabras clave: <span id="claves_txt"> </span></label>
 				<input type="hidden" class="uk-input" name="claves" id="claves" value="">
 
 					<div class="uk-card uk-card-default uk-padding">
@@ -166,14 +166,14 @@
 								}
 						echo'
 						</div>
-					</div>
+					</div>-->
 
 					<div class="uk-margin">
 						<label for="txt">Descripción</label>
 						<textarea class="editor" name="txt" id="txt"></textarea>
 					</div>
 				</div>
-
+			
 				
 
 				<div class="uk-margin">

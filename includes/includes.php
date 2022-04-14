@@ -39,40 +39,37 @@
 		
 		';
 
+	$menu='
+		<li class="uk-flex uk-flex-middle"><a href="'.$rutaInicio.'">home</a></li>
+		<li class="uk-flex uk-flex-middle"><a href="#">Servicios</a></li>
+		<li class="uk-flex uk-flex-middle"><a href="'.$rutaNosotros.'">nosotros</a></li>
+		<li class="uk-flex uk-flex-middle"><a href="'.$rutaContacto.'">contacto</a></li>';
+
+	$menusocial='
+		<li class="uk-flex uk-flex-middle"><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+		<li class="uk-flex uk-flex-middle"><a href="#"><i class="fab fa-instagram"></i></a></li>
+		<li class="uk-flex uk-flex-middle"><a href="#"><i class="fab fa-facebook-f"></i></a></li>';
+
 /* %%%%%%%%%%%%%%%%%%%% HEADER                 */
 	$stickerClass=($carroTotalProds==0 )?'nocart':'cotizacion-fixed-img';
 
 	$header='
 		<div class="uk-offcanvas-content">
-
 			<header>
-
-			<nav class="uk-navbar-container" uk-navbar>
-
-			<div class="uk-navbar-left">
-		
-				<ul class="uk-navbar-nav">
-					<li class="">  <a href="" class="uk-navbar-item uk-logo"></a></li>
-					<li><a href="#">home</a></li>
-					<li><a href="#">Servicios</a></li>
-					<li><a href="#">nosotros</a></li>
-					<li><a href="#">contacto</a></li>
-				</ul>
-		
-			</div>
-		
-			<div class="uk-navbar-right">
-		
-				<ul class="uk-navbar-nav">
-					<li><a href="#">TEL</a></li>
-					<li><a href="#">what</a></li>
-					<li><a href="#">inst</a></li>
-					<li><a href="#">face</a></li>
-				</ul>
-		
-			</div>
-		
-		</nav>
+				<nav class="uk-navbar-container padding-v-20 padding-h-40" uk-navbar>
+					<div class="uk-navbar-left">
+						<ul class="uk-navbar-nav">
+							<a href="'.$rutaInicio.'" class="uk-navbar-item uk-logo"><img src="img/design/logo.png"></a> 
+							'.$menu.'
+						</ul>
+					</div>
+					<div class="uk-navbar-right">
+						<ul class="uk-navbar-nav">
+							<li class="uk-flex uk-flex-middle"><a href="#">TEL</a></li>
+							'.$menusocial.'
+						</ul>
+					</div>
+				</nav>
 			</header>
 
 			'.$mensajes.'
@@ -89,33 +86,28 @@
 
 /* %%%%%%%%%%%%%%%%%%%% FOOTER                 */
 	$whatsIconClass=(isset($_SESSION['whatsappHiden']))?'':'uk-hidden';
+
+	$footer_fal= '
+	<nav class="" uk-navbar>
+		<div class="uk-navbar-left">
+			<a href="<?=$rutaInicio?>" class="uk-navbar-item uk-logo"><img src="img/design/logo_light.png" style="width: 4em"></a> 
+		</div>
+		<div class="uk-navbar-center">
+			<ul class="uk-navbar-nav">
+				'.$menu.'
+				<li><a href="1_politicas">Aviso de privacidad</a></li>
+				<li><a href="preguntas-frecuentes">FAQ</a></li>
+			</ul>
+		</div>
+		
+	</nav>	
+	';
 	$footer = '
 		<footer>
-		<div class="padding-v-30" style="margin-top: 7em">
-		<div class=" uk-flex uk-flex-center">
-			<div class=" uk-text-center">
-				<img src="img/design/logo.png"  style="width: 70%;">
-				<div class="uk-grid uk-margin-remove">
-					<div class="uk-width-1-4"></div>
-					<div class="uk-width-1-2 uk-grid">
-						<div class="uk-width-1-6"></div>
-						<div class="uk-width-1-6 uk-padding-remove"><a target="_blank" href="'.$socialWhats.'"><i class="fab fa-whatsapp"></i></a></div>
-						<div class="uk-width-1-6 uk-padding-remove"><a target="_blank" href="'.$socialInst.'"><i class="fab fa-instagram"></i></a></div>
-						<div class="uk-width-1-6 uk-padding-remove"><a target="_blank" href="'.$socialFace.'"><i class="fab fa-facebook-f"></i></a></div>
-						<div class="uk-width-1-6 uk-padding-remove"><a target="_blank" href="'.$socialYou.'"><i class="fab fa-youtube"></i></a></div>
-						<div class="uk-width-1-6"></div>
-					</div>
-					<div class="uk-width-1-4"></div>
-
-				</div>
-				<a href="#offcanvas-usage" uk-toggle><i class="fas fa-bars"></i></a>
+	
+			<div class="uk-text-center text-8 padding-v-20">
+				TODOS LOS DERECHOS RESERVADOS SEVILLA MACIP 2021 DISEÑO POR WOZIAL MARKETING LOVERS
 			</div>
-			
-		</div>
-		<div class="uk-text-center text-8 padding-v-10">
-			TODOS LOS DERECHOS RESERVADOS ROBERT DELGADILLOJEWELRY 2021 DISEÑO POR WOZIAL MARKETING LOVERS
-		</div>
-	</div>
 				
 		</footer>';
 		

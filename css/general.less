@@ -1,6 +1,6 @@
 /* ----------- VARIABLES    */
-	@color_primario: #9ebaca;
-	@color_secundario: white;
+	@color_primario: #002349;
+	@color_secundario: #aab9c8;
 	@color_terciario: black;	
 
 
@@ -81,7 +81,7 @@
 	}
 	.uk-accordion-title:focus,
 	.uk-accordion-title:hover,	
-	.color-blanco{
+	.color-white{
 		color: white !important;
 	}
 	.uk-slidenav,
@@ -168,7 +168,8 @@
 	.uk-navbar-nav > li > a,
 	.uk-navbar-item,
 	.uk-navbar-toggle {
-		color: black;
+		color: @color_primario;
+		font-weight: 500;
 		font-size: 1em;
 		padding: 0 20px;
 		min-height: 50px;
@@ -178,7 +179,9 @@
 	.uk-navbar-nav > li:hover > a,
 	.uk-navbar-nav > li > a:focus,
 	.uk-navbar-nav > li > a.uk-open {
-		color: black;
+		color: @color_primario;
+		font-weight: 500;
+		border-bottom: 2px solid @color_primario;
 		outline: none;
 	}
 	.uk-navbar-dropdown-nav{
@@ -338,24 +341,31 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
 
 /*--------INICIO--------*/
 
-	.seccion-ini-1{
-		padding-top:100px;
+
+	.border-50{
+		border-top: 3px @color_primario solid;
+		width: 50%;
+		height: 0;
+
 	}
-	.puma-right{
-		position: absolute;
-		right: 0;
+	.border-u{
+		border-bottom:5px solid white ;
+		border-left:5px solid white ;
+		border-right:5px solid white ;
+		border-radius:0px 0px 20px 20px;
 	}
-	.puma-left{
-		position: absolute;
-		left: 0;
+	.border-u-inver{
+		border-top:5px solid white ;
+		border-left:5px solid white ;
+		border-right:5px solid white ;
+		border-radius: 20px 20px 0px 0px;
 	}
-	.slide-card-size{
-		height: 18em;
-		width: 18em;
+	.circulo-servi{
+		color: @color_primario;
+		border: 3px solid;
+		height: 12em;
+		width: 12em;
 	}
-	.uk-thumbnav>* {
-    padding-left: 11px;
-}
 
 	
 /*	----------TIENDA		*/
@@ -390,9 +400,19 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
 	}
 
 /*	----------CONTACTO	*/
+
+	.border-white{
+		border: 5px solid white;
+		border-radius: 20px;
+	}
 	.input-contacto{
-		background-color: transparent;
-		border: 1px solid black;
+		background-color: @color_secundario;
+		color: @color_primario;
+		border-radius: 20px;
+		width: 180px;
+	}
+	.input-contacto::-webkit-input-placeholder {
+		color: @color_primario;
 	}
 
 /*  ---------- GENERALES    */
@@ -450,7 +470,6 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
 	}
 	a,
 	a:hover,
-	.uk-navbar-nav > li > a,
 	.uk-button,
 	.uk-button:hover,
 	.transicion,
@@ -489,6 +508,9 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
 	}
 	.margin-0{
 		margin: 0;
+	}
+	.margin-5{
+		margin: 5px;
 	}
 	.margin-10{
 		margin: 10px;
@@ -582,6 +604,9 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
 	}
 	.padding-bottom-30{
 		padding-bottom: 30px;
+	}
+	.padding-bottom-40{
+		padding-bottom: 40px;
 	}
 	.padding-bottom-50{
 		padding-bottom: 50px;
