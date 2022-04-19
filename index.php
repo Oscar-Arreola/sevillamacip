@@ -53,6 +53,13 @@ switch ($identificador) {
 		include 'includes/includes.php';
 		include 'pages/contacto.php';
 		break;
+	
+	case 6:
+		$nav4='uk-active';
+		$id=(isset($_GET['id']))?$_GET['id']:0;
+		include 'includes/includes.php';
+		include 'pages/servicio-detalle.php';
+		break;
 
 
 

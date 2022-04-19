@@ -10,6 +10,7 @@ RewriteRule ^productos$        	 			 index.php?identificador=3
 RewriteRule ^(.*)\_(.*)\_(.*)\_productos$        	 index.php?identificador=3&pag=$1&prodspagina=$2&cat=$3
 RewriteRule ^sucursales$                     index.php?identificador=4
 RewriteRule ^contacto$                       index.php?identificador=5
+RewriteRule ^(.*)\_servicio-detalle$         index.php?identificador=6&id=$1
 
 
 RewriteRule ^(.*)\_(.*)\_(.*)\_.*._wozial$   index.php?identificador=10&cat=$1&marca=$2&pag=$3
