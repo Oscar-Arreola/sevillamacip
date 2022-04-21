@@ -68,10 +68,8 @@
 				<tr>
 					<th width="40px" ></th>
 					<th width="10px" >SKU</th>
-					<th width="auto" >Modelo</th>
-					<th width="100px">Precio</th>
-					<th width="90px" >Descuento</th>
-					<th width="50px" >Preventa</th>
+					<th width="auto" >Servicio</th>
+					
 					<th width="50px" >En inicio</th>
 					<th width="50px" >Activo</th>
 					<th width="80px"></th>
@@ -130,15 +128,6 @@
 					</td>
 					<td class="uk-text-truncate">
 						'.$rowCONSULTA['titulo'].'
-					</td>
-					<td>
-						<input type="text" class="editarajax uk-input input-number uk-form-small uk-text-right '.$clasePrecio.'" data-tabla="'.$modulo.'" data-campo="precio" data-id="'.$prodID.'" value="'.$rowCONSULTA['precio'].'" tabindex="8">
-					</td>
-					<td>
-						<input type="text" class="editarajax uk-input input-number-deci uk-form-small uk-text-right descuento '.$claseDescuento.'" data-tabla="'.$modulo.'" data-campo="descuento" data-id="'.$prodID.'" value="'.$rowCONSULTA['descuento'].'" tabindex="9">
-					</td>
-					<td class="uk-text-center@m">
-						<i class="estatuschange pointer fas fa-lg fa-toggle-'.$prevenIcon.'" data-tabla="'.$modulo.'" data-campo="preventa" data-id="'.$rowCONSULTA['id'].'" data-valor="'.$rowCONSULTA['preventa'].'"></i>
 					</td>
 					<td class="uk-text-center@m">
 						<i class="estatuschange pointer fas fa-lg fa-toggle-'.$inicioIcon.'" data-tabla="'.$modulo.'" data-campo="inicio" data-id="'.$rowCONSULTA['id'].'" data-valor="'.$rowCONSULTA['inicio'].'"></i>

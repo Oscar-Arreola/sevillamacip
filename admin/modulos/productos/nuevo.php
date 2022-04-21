@@ -46,7 +46,7 @@
 						<input type="text" class="uk-input" name="titulo" required>
 					</div>
 
-					<!--<div>
+					<div>
 						<label for="categoria">Categoría y subcategoría</label>
 						<div>
 							<select name="categoria" data-placeholder="Seleccione una" class="chosen-select uk-select" required>
@@ -83,7 +83,7 @@
 									echo '
 							</select>
 						</div>
-					</div>-->
+					</div>
 
 					<!--<div>
 						<label for="marca">Marca</label>
@@ -127,28 +127,14 @@
 					
 				</div>
 
-				<!--<div uk-grid class="uk-grid-small uk-child-width-1-3@s">
+				<div uk-grid class="uk-grid-small uk-child-width-1-3@s">
 			
-					<div>
+					<!--<div>
 						<label for="precio">Precio de lista</label>
 						<input type="text" class="uk-input input-number" name="precio" min="0" required>
-					</div>
-					<div>
-					<label for="preventa">preventa</label>
-						<select name="preventa" data-placeholder="Seleccione uno" class="chosen-select uk-select" required>
-							<option value="0">no</option>
-							<option value="1">si</option>
-						</select>
-					</div>
-					<div>
-						<label for="preventa">fecha preventa</label>
-						<input type="date"  class="uk-input" name="fechapreve">
-					</div>
-					<div>
-						<label for="descuento">Descuento</label>
-						<input type="text" class="uk-input input-number-deci descuento" name="descuento" value="0" min="0" max="100" required>
-					</div>
-				</div>-->
+					</div>-->
+					
+				</div>
 
 
 				<div uk-grid class="uk-grid-small uk-child-width-1-1@s">

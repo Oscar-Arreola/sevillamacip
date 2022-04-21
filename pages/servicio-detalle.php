@@ -36,8 +36,8 @@
 <section>
 	<div class="padding-h-40 padding-v-40">
 		<div class="uk-grid uk-margin-remove  padding-40">
-			<div class="uk-width-1-2 uk-padding-remove">
-				<img src="img/design/producto1.png" alt="" style="margin-top: -35%;position: relative;z-index: 3;">
+			<div class="uk-width-1-2">
+				<img src="img/design/producto1.png" alt="" style="margin-top: -20%;position: relative;z-index: 3;" >
 			</div>
 			<div class="uk-width-1-2">
 				<div>
@@ -48,21 +48,21 @@
 		<div class="padding-40">
 			<div class="uk-width-1-1">
 				<div class="uk-grid uk-margin-remove">
-					<div class="uk-width-5-6">
-						<hr style="border-top:2px solid red; width: 100%">
+					<div class="uk-width-5-6 uk-margin-auto-vertical">
+						<hr style="border-top:4px solid #002349; width: 100%">
 					</div>
 					<div class="uk-width-auto">
-						<img src="img/design/pdfdescarga.png" alt="">
+						<a href=""><img src="img/design/pdfdescarga.png" alt=""></a>
 					</div>
 					
 				</div>
 			</div>
-			<div class="uk-width-1-1">
+			<div class="uk-width-1-1 padding-left-40">
 				<div  class="uk-margin-auto-vertical" >
-				<div>
-					<h1 class="uk-text-uppercase color-primary uk-text-bold text-xxl">Agenda tu consultoria</h1>
-					<div>¡Estamos para apoyaste y darle la mejor solucion!</div>
-				</div>
+					<div>
+						<h1 class="uk-text-uppercase color-primary uk-text-bold text-xxl">Agenda tu consultoria</h1>
+						<div>¡Estamos para apoyaste y darle la mejor solucion!</div>
+					</div>
 					<form class=" form-contacto">
 						<input class="uk-input input-contacto uk-margin-remove" type="text" id="nombre" placeholder="Nombre">
 						<input class="uk-input input-contacto uk-margin-remove" type="text" id="telefono" placeholder="Telefono">
@@ -74,38 +74,13 @@
 		</div>
 	</div>
 </section>
+
 <section>
 	<div>
 		<div class="uk-container-expand bg-secondary">
 			<div class="padding-h-40">
 				<div class="uk-margin-remove border-u padding-40">
-					<div class="uk-text-center margin-top-30 uk-width-1-1">
-						<h1 class="uk-text-uppercase color-primary uk-text-bold text-xxl">Servicios</h1>
-						<p style="max-width: 36em;margin-left: auto;margin-right: auto;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-					</div>
-					<div class="uk-container">
-						<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
-							<ul class="uk-slider-items uk-child-width-1-1 uk-child-width-1-3@m">
-							<?php for ($i=0; $i < 3; $i++) { ?>
-								<li>
-									<div class="uk-flex uk-flex-center uk-padding-remove">
-										<div class="circulo-servi uk-border-circle uk-flex uk-flex-middle uk-flex-center  uk-inline">
-											<div>
-												<div class="text-lg uk-text-center">soluciones</div>
-												<div class="text-lg uk-text-center uk-text-bold">Individuales</div>
-											</div>
-											<div class="uk-position-bottom-right uk-text-center "><img src="img/design/fecha-link.png" alt="" style="width: 4em; cursor: pointer"></div>
-										</div>
-									</div>
-								</li>
-							<?php }?>
-							</ul>
-
-							<a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-							<a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
-
-						</div>
-					</div>
+					
 					<div class="padding-v-40">
 						<div class="uk-text-center margin-top-30 uk-width-1-1">
 							<h1 class="uk-text-uppercase color-primary uk-text-bold text-xxl">¡Trabajamos con los mejores!</h1>

@@ -41,7 +41,7 @@
 
 	$menu='
 		<li class="uk-flex uk-flex-middle"><a href="'.$rutaInicio.'">home</a></li>
-		<li class="uk-flex uk-flex-middle"><a href="#">Servicios</a></li>
+		<li class="uk-flex uk-flex-middle"><a href="'.$rutaInicio.'#servicios">Servicios</a></li>
 		<li class="uk-flex uk-flex-middle"><a href="'.$rutaNosotros.'">nosotros</a></li>
 		<li class="uk-flex uk-flex-middle"><a href="'.$rutaContacto.'">contacto</a></li>';
 

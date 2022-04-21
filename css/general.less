@@ -401,6 +401,12 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
 
 /*	----------CONTACTO	*/
 
+	.border-top-azul{
+		border-top: 3px solid @color_primario;
+	}
+	.border-bottom-azul{
+		border-bottom: 3px solid @color_primario;
+	}
 	.border-white{
 		border: 5px solid white;
 		border-radius: 20px;
@@ -412,6 +418,14 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
 		width: 180px;
 	}
 	.input-contacto::-webkit-input-placeholder {
+		color: @color_primario;
+	}
+	.input-contacto2{
+		background-color: white;
+		color: @color_primario;
+		border-radius: 20px;
+	}
+	.input-contacto2::-webkit-input-placeholder {
 		color: @color_primario;
 	}
 
@@ -685,6 +699,9 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
 	.padding-left-30{
 		padding-left: 30px;
 	}
+	.padding-left-40{
+		padding-left: 40px;
+	}
 	.padding-left-50{
 		padding-left: 50px;
 	}
@@ -793,7 +810,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endCo
 		cursor: pointer;
 	}
 	#map{
-		min-height: 400px;
+		min-height: 700px;
 	}
 	.text-5{
 		font-size: .5em;
