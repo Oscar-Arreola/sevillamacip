@@ -45,7 +45,7 @@
 				<div uk-grid class="uk-grid-small uk-child-width-1-3@s">
 					
 					<div>
-						<label for="titulo">Modelo</label>
+						<label for="titulo">Titulo</label>
 						<input type="text" class="uk-input" name="titulo" value="'.$row_catalogo['titulo'].'" required>
 					</div>
 					
@@ -92,7 +92,7 @@
 							</select>
 						</div>
 					</div>-->
-					<div>
+					<!--<div>
 						<label for="tipotalla">Tipo de talla</label>
 						<div>
 							<select name="tipotalla" data-placeholder="Seleccione una" class="chosen-select uk-select" required>
@@ -106,44 +106,44 @@
 								echo '
 							</select>
 						</div>
-					</div>
+					</div>-->
 					
 					
 				</div>
 
-				<div uk-grid class="uk-grid-small uk-child-width-1-3@s">
+					<!--<div uk-grid class="uk-grid-small uk-child-width-1-3@s">
 				
-					<div>
-						<label for="precio">Precio de lista</label>
-						<input type="text" class="uk-input input-number" name="precio" value="'.$row_catalogo['precio'].'" required>
-					</div>
-					<div>
-						<label for="preventa">preventa</label>
-							<select name="preventa" data-placeholder="Seleccione uno" class="chosen-select uk-select" required>
-							';
-							if ($row_catalogo['preventa']== 0) {
-										$estatus0='selected';
-										$estatus1='';
-									}else{
-										$estatus0='';
-										$estatus1='selected';
-									}
-							echo'
-								<option value="0" '.$estatus0.'>no</option>
-								<option value="1" '.$estatus1.'>si</option>
-							</select>
+						<div>
+							<label for="precio">Precio de lista</label>
+							<input type="text" class="uk-input input-number" name="precio" value="'.$row_catalogo['precio'].'" required>
 						</div>
 						<div>
-							<label for="preventa">fecha preventa</label>
-							<input type="date"  class="uk-input" name="fechapreve" value="'.$row_catalogo['fechapreve'].'">
-						</div>
-						<div>
-							<label for="descuento">Descuento</label>
-							<input type="text" class="uk-input input-number-deci descuento" name="descuento" value="'.$row_catalogo['descuento'].'" required>
-						</div>
-					</div>
+							<label for="preventa">preventa</label>
+								<select name="preventa" data-placeholder="Seleccione uno" class="chosen-select uk-select" required>
+								';
+								if ($row_catalogo['preventa']== 0) {
+											$estatus0='selected';
+											$estatus1='';
+										}else{
+											$estatus0='';
+											$estatus1='selected';
+										}
+								echo'
+									<option value="0" '.$estatus0.'>no</option>
+									<option value="1" '.$estatus1.'>si</option>
+								</select>
+							</div>
+							<div>
+								<label for="preventa">fecha preventa</label>
+								<input type="date"  class="uk-input" name="fechapreve" value="'.$row_catalogo['fechapreve'].'">
+							</div>
+							<div>
+								<label for="descuento">Descuento</label>
+								<input type="text" class="uk-input input-number-deci descuento" name="descuento" value="'.$row_catalogo['descuento'].'" required>
+							</div>
+					</div>-->
 					<div uk-grid class="uk-grid-small uk-child-width-1-1@s">
-						<label for="palabras_clave">Palabras clave: <span id="claves_txt"> </span></label>
+						<!--<label for="palabras_clave">Palabras clave: <span id="claves_txt"> </span></label>
 						<input type="hidden" class="uk-input" name="claves" id="claves" value="">
 
 							<div class="uk-card uk-card-default uk-padding">
@@ -167,31 +167,31 @@
 										}
 								echo'
 								</div>
-							</div>
+							</div>-->
 
 							<div class="uk-margin">
 								<label for="txt">Descripción</label>
-								<textarea class="editor" name="txt" id="txt"></textarea>
+								<textarea class="editor" name="txt" id="txt">'.$row_catalogo['txt'].'</textarea>
 							</div>
 						</div>
 			
-				</div>
+					
 
 				
 
-				<div class="uk-margin">
-					<label for="title">Título google</label>
-					<input type="text" class="uk-input" name="title" value="'.$row_catalogo['title'].'">
+					<div class="uk-margin">
+						<label for="title">Título google</label>
+						<input type="text" class="uk-input" name="title" value="'.$row_catalogo['title'].'">
+					</div>
+					<div class="uk-margin">
+						<label for="metadescription">Descripción google</label>
+						<textarea class="uk-textarea" name="metadescription">'.$row_catalogo['metadescription'].'</textarea>
+					</div>
+					<div class="uk-margin uk-text-center">
+						<a href="index.php?rand='.rand(1,1000).'&modulo='.$modulo.'&archivo=detalle&id='.$id.'" class="uk-button uk-button-default uk-button-large" tabindex="10">Cancelar</a>					
+						<button name="send" class="uk-button uk-button-primary uk-button-large">Guardar</button>
+					</div>
 				</div>
-				<div class="uk-margin">
-					<label for="metadescription">Descripción google</label>
-					<textarea class="uk-textarea" name="metadescription">'.$row_catalogo['metadescription'].'</textarea>
-				</div>
-				<div class="uk-margin uk-text-center">
-					<a href="index.php?rand='.rand(1,1000).'&modulo='.$modulo.'&archivo=detalle&id='.$id.'" class="uk-button uk-button-default uk-button-large" tabindex="10">Cancelar</a>					
-					<button name="send" class="uk-button uk-button-primary uk-button-large">Guardar</button>
-				</div>
-
 			</form>
 		</div>
 	</div>

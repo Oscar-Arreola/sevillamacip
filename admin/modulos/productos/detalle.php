@@ -70,7 +70,7 @@
 	echo '
 	<div class="uk-width-1-1">
 		<div class="uk-card uk-card-default uk-card-body">
-			<h3 class="uk-text-center">EXISTENCIAS DE '.strtoupper($tipo).'</h3>
+			<!--<h3 class="uk-text-center">EXISTENCIAS DE '.strtoupper($tipo).'</h3>-->
 			<ul class="uk-subnav uk-subnav-pill uk-flex-center" uk-switcher>';
 			$CONSULTA = $CONEXION -> query("SELECT * FROM productostalla WHERE tipo = '$tipotalla' ORDER BY orden");
 			while ($rowCONSULTA = $CONSULTA -> fetch_assoc()) {
