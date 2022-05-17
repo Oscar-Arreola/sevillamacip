@@ -170,8 +170,12 @@
 							</div>-->
 
 							<div class="uk-margin">
-								<label for="txt">Descripción</label>
+								<label for="txt">Descripción principal</label>
 								<textarea class="editor" name="txt" id="txt">'.$row_catalogo['txt'].'</textarea>
+							</div>
+							<div class="uk-margin">
+								<label for="txt1">Descripción Extendida <span class="uk-text-warning">(nota: si es una solucion no es necesario llenar este campo )</span></label>
+								<textarea class="editor" name="txt1" id="txt1">'.$row_catalogo['txt1'].'</textarea>
 							</div>
 						</div>
 			

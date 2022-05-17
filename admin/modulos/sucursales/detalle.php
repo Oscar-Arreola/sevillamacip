@@ -16,7 +16,7 @@ echo '
 	</ul>
 </div>
 <div class="uk-width-1-2@s uk-text-right margin-v-20">
-	<a href="index.php?rand='.rand(1,1000).'&modulo='.$modulo.'&archivo=nuevo&" class="uk-button uk-button-default"><i class="fa fa-lg fa-plus"></i> &nbsp; Nuevo</a>
+<!--	<a href="index.php?rand='.rand(1,1000).'&modulo='.$modulo.'&archivo=nuevo&" class="uk-button uk-button-default"><i class="fa fa-lg fa-plus"></i> &nbsp; Nuevo</a>-->
 	<a href="index.php?rand='.rand(1,1000).'&modulo='.$modulo.'&archivo=editar&id='.$id.'" class="uk-button uk-button-primary"><i class="fas fa-pencil-alt"></i> &nbsp; Editar</a>
 </div>
 
@@ -41,89 +41,13 @@ echo '
 				</div>
 			</div>
 		</div>
-		<div class="uk-width-1-4@s">
-			<div class="">
-				<h3 class="uk-text-center">Imagen</h3>
-			</div>
-			<div class="">
-				<div class="uk-text-muted">
-					Dimensiones recomendadas: 500 x 500 px
-				</div>
-				<div id="fileuploadermain">
-					Cargar
-				</div>
-			</div>
-			<div class="uk-text-center margin-v-20">';
-
-// sharePic
-	$pic=$rutaFinal.$rowCONSULTA['imagen'];
-	if(strlen($rowCONSULTA['imagen'])>0 AND file_exists($pic)){
-		echo '
-				<div class="uk-panel uk-text-center">
-					<a href="'.$pic.'" target="_blank">
-						<img src="'.$pic.'" class="img-responsive uk-border-rounded margin-top-20">
-					</a><br><br>
-					<button class="uk-button uk-button-danger borrarpic"><i uk-icon="icon:trash"></i> Eliminar imagen</button>
-				</div>';
-	}elseif(strpos($rowCONSULTA['imagen'],'http')!==false){
-		echo '
-				<div class="uk-panel uk-text-center">
-					<a href="'.$rowCONSULTA['imagen'].'" target="_blank">
-						<img src="'.$rowCONSULTA['imagen'].'" class="img-responsive uk-border-rounded margin-top-20">
-					</a>
-					<br>
-				</div>';
-	}else{
-		echo '
-				<div class="uk-panel uk-text-center">
-					<p class="uk-scrollable-box"><i uk-icon="icon:image;ratio:5;"></i><br><br>
-						Falta imagen<br><br>
-					</p>
-				</div>';
-	}
-
-echo '
-			</div>
-		</div>
-		<div class="uk-width-1-4@s">
-			<div class="uk-card uk-card-body uk-card-default">
-				<h2>Productos disponibles</h2>';
-				// para hacer la relacion entre sucursal y productos se hizo un tabla diferente donde al checar el checkbox 
-				// verifica si exite un registro igual si asi es le cambia  el estatus sino inseta un nuevo registro con 
-				// los nuevos datos (lo datos se mandan atravez de un script a el archivo acciones donde se procesa)
-				$CONSULTAcat = $CONEXION -> query("SELECT * FROM productoscat WHERE parent = 0 ORDER BY orden ");
-				while ($row_CONSULTAcat = $CONSULTAcat -> fetch_assoc()) { 
-					
-					$nombre = $row_CONSULTAcat['txt'];
-					$check = '';
-
-					$CONSULTAcatsuc = $CONEXION->query("SELECT * FROM sucursalescat WHERE sucursal = $id AND nombre = '$nombre'");
-					$cat_exis = $CONSULTAcatsuc ->num_rows;
-
-					if ($cat_exis != 0) {
-						$row_CONSULTAcatsuc = $CONSULTAcatsuc -> fetch_assoc();
-							$estatus =$row_CONSULTAcatsuc['estatus'];
-						if ( $estatus == 1) {
-								$check = 'checked';
-							}else{
-								$check = '';
-							}	
-					}
-
-				
-						echo'
-						  <div class="uk-margin">
-								<label><input class="uk-checkbox editarcat" id="'.$row_CONSULTAcat['id'].'" type="checkbox" data-suc="'.$id.'" '.$check.'> '.$row_CONSULTAcat['txt'].'</label>
-						</div>
-					';
-					}
-			echo '
-			</div>
-		</div>
+		
 	</div>
 </div>
 
+';
 
+echo'
 
 
 <script async defer src="https://maps.googleapis.com/maps/api/js?key='.$googleMaps.'&callback=initMap"></script>

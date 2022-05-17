@@ -30,12 +30,13 @@
 
 	$menuMovil='
 
-		<li class="'.$nav1.' text-nav"><a class="" href="'.$rutaInicio.'"><img data-src="img\design\CORTES_DESTACADOS.png" uk-img style="max-height: 20px"> Inicio</a></li>
-		<li class="'.$nav2.' text-nav"><a class="" href="'.$rutaNosotros.'"><img data-src="img\design\CORTES_DESTACADOS.png" uk-img style="max-height: 20px"> Nosotros</a></li>
-		<li class="'.$nav3.' text-nav"><a class="" href="'.$rutaProductos.'"><img data-src="img\design\CORTES_DESTACADOS.png" uk-img style="max-height: 20px"> Productos</a></li>
-		<li class="'.$nav4.' text-nav"><a class="" href="'.$rutaSucursales.'"><img data-src="img\design\CORTES_DESTACADOS.png" uk-img style="max-height: 20px"> Sucursales</a></li>
-		<li class="'.$nav5.' text-nav"><a class="" href="'.$ruta.'#negocios"><img data-src="img\design\CORTES_DESTACADOS.png" uk-img style="max-height: 20px"> Negocios</a></li>
-		<li class="'.$nav6.' text-nav"><a class="" href="'.$rutaContacto.'"><img data-src="img\design\CORTES_DESTACADOS.png" uk-img style="max-height: 20px"> Contacto</a></li>
+		<li class="'.$nav1.' text-nav"><a class="" href="'.$rutaInicio.'"> Home</a></li>
+		<li class="'.$nav3.' text-nav"><a class="" href="'.$rutaInicio.'#servicios">Servicios</a></li>
+		<li class="'.$nav2.' text-nav"><a class="" href="'.$rutaNosotros.'"> Nosotros</a></li>
+		<li class="'.$nav6.' text-nav"><a class="" href="'.$rutaContacto.'"> Contacto</a></li>
+		<li class="'.$nav6.' text-nav"><a href="1_politicas">Aviso de privacidad</a></li>
+		<li class="'.$nav6.' text-nav"><a href="preguntas-frecuentes">FAQ</a></li>
+
 		
 		';
 
@@ -46,17 +47,17 @@
 		<li class="uk-flex uk-flex-middle"><a href="'.$rutaContacto.'">contacto</a></li>';
 
 	$menusocial='
-		<li class="uk-flex uk-flex-middle"><a href="#"><i class="fab fa-whatsapp"></i></a></li>
-		<li class="uk-flex uk-flex-middle"><a href="#"><i class="fab fa-instagram"></i></a></li>
-		<li class="uk-flex uk-flex-middle"><a href="#"><i class="fab fa-facebook-f"></i></a></li>';
+		<li class="uk-flex uk-flex-middle"><a href="'.$socialWhats.'"><i class="fab fa-whatsapp"></i></a></li>
+		<li class="uk-flex uk-flex-middle"><a href="'.$socialInst.'"><i class="fab fa-instagram"></i></a></li>
+		<li class="uk-flex uk-flex-middle"><a href="'.$socialFace.'"><i class="fab fa-facebook-f"></i></a></li>';
 
 /* %%%%%%%%%%%%%%%%%%%% HEADER                 */
 	$stickerClass=($carroTotalProds==0 )?'nocart':'cotizacion-fixed-img';
 
 	$header='
 		<div class="uk-offcanvas-content">
-			<header>
-				<nav class="uk-navbar-container padding-v-20 padding-h-40" uk-navbar>
+			<header class="uk-width-1-1 uk-padding-remove uk-margin-remove ">
+				<nav class="uk-navbar-container padding-v-20 padding-h-40  uk-visible@l" uk-navbar>
 					<div class="uk-navbar-left">
 						<ul class="uk-navbar-nav">
 							<a href="'.$rutaInicio.'" class="uk-navbar-item uk-logo"><img src="img/design/logo.png"></a> 
@@ -65,12 +66,21 @@
 					</div>
 					<div class="uk-navbar-right">
 						<ul class="uk-navbar-nav">
-							<li class="uk-flex uk-flex-middle"><a href="#">TEL</a></li>
+							<li class="uk-flex uk-flex-middle"><a href="tel:'.$telefonoSeparado.'">TEL: '.$telefonoSeparado.'</a></li>
 							'.$menusocial.'
 						</ul>
 					</div>
 				</nav>
 			</header>
+
+			<div class="uk-hidden@l" style="position: fixed; z-index: 10; top: 15px; left: 15px;">
+				<div class="uk-width-auto ">
+					<a href="#menu-movil" uk-toggle class="color-negro ">
+						<i class="fa fa-bars" aria-hidden="true" style="font-size: 30px"></i> &nbsp;
+					</a>
+				</div>
+			</div>
+		
 
 			'.$mensajes.'
 
@@ -82,6 +92,7 @@
 						'.$menuMovil.'
 					</ul>
 				</div>
+			</div>
 			</div>';
 
 /* %%%%%%%%%%%%%%%%%%%% FOOTER                 */
@@ -106,7 +117,7 @@
 		<footer>
 	
 			<div class="uk-text-center text-8 padding-v-20">
-				TODOS LOS DERECHOS RESERVADOS SEVILLA MACIP 2021 DISEÑO POR WOZIAL MARKETING LOVERS
+				TODOS LOS DERECHOS RESERVADOS SEVILLA MACIP 2022 DISEÑO POR WOZIAL MARKETING LOVERS
 			</div>
 				
 		</footer>';

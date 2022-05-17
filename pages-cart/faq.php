@@ -18,7 +18,7 @@
       while ($row_CONSULTA = $CONSULTA  -> fetch_assoc()) { 
         echo '
       <li class="'.$open.' border-grey">
-        <a class="uk-accordion-title color-blanco bg-primary" href="#">
+        <a class="uk-accordion-title color-white bg-primary" href="#">
           <div class="padding-20">
           '.$row_CONSULTA['pregunta'].'
           </div>

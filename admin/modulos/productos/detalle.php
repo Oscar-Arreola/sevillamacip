@@ -161,7 +161,7 @@
 					<span class="uk-text-capitalize uk-text-muted">modelo:</span>
 					'.$rowConsultaItem['titulo'].'
 				</div>
-				<div>
+				<!--<div>
 					<span class="uk-text-muted">Precio de lista:</span>
 					$'.number_format($rowConsultaItem['precio'],2).'
 				</div>
@@ -180,7 +180,7 @@
 				<div>
 					<span class="uk-text-capitalize uk-text-muted">Palabras clave:</span>
 					'.$rowConsultaItem['claves'].'
-				</div>
+				</div>-->
 				<div class="uk-margin bordered">
 					<span class="uk-text-capitalize uk-text-muted">Descripción:</span>
 					'.$rowConsultaItem['txt'].'
@@ -216,6 +216,9 @@
 			<div id="fileuploader">
 				Cargar
 			</div>
+		</div>
+		<div class="uk-width-1-1 uk-text-warning">
+			(nota: la primera imagen sera la que apareca arriba del todo en el detalle del producto, las imagenes se pueden arrastra para cambiar su orden)
 		</div>
 		<div class="uk-width-1-1 uk-text-center">
 			<div uk-grid id="pics" class="uk-grid-small uk-grid-match sortable" data-tabla="'.$modulopic.'">';
@@ -255,6 +258,47 @@
 
 		';
 
+// PDF
+echo '
+	<div class="uk-width-1-1 margin-top-50">
+		<h3 class="uk-text-center">pdf</h3>
+	</div>
+
+	<div class="uk-width-1-1">
+		<div id="fileuploadermain">
+			Cargar
+		</div>
+	</div>
+	<div class="uk-width-1-1 uk-text-center">
+		<div uk-grid id="pics" class="uk-grid-small uk-grid-match sortable" data-tabla="'.$modulo.'">';
+
+	$consultaPIC = $CONEXION -> query("SELECT * FROM $modulo WHERE id = $id");
+	$numProds=$consultaPIC->num_rows;
+	while ($row_consultaPIC = $consultaPIC -> fetch_assoc()) {
+		$picId=$row_consultaPIC['id'];
+		$picName=$row_consultaPIC['imagen'];
+		$pic=$rutaFinal.$picName;
+		if ($picName != null) {
+			if(file_exists($pic)){
+				echo '
+					<div id="'.$picId.'">
+						<div class="uk-card uk-card-default uk-card-body uk-text-center">
+							<a href="'.$pic.'" class="uk-icon-button uk-button-white" target="_blank" uk-icon="icon:image"></a> &nbsp;
+							<a href="javascript:borrarpdf(picID='.$picId.')" class="uk-icon-button uk-button-danger" tabindex="1" uk-icon="icon:trash"></a>
+							<br>
+							<img src="../img/design/pdf1.png" class="uk-border-rounded margin-top-20" style="max-width:200px;">
+						</div>
+					</div>';
+			}
+		}
+	}
+
+	echo '
+		</div>
+	</div>
+
+	';
+
 $scripts='
 	// Eliminar foto
 		function borrarfoto (id) { 
@@ -265,6 +309,26 @@ $scripts='
 					url: "modulos/'.$modulo.'/acciones.php",
 					data: { 
 						borrarfoto: 1,
+						id: id
+					}
+				})
+				.done(function( msg ) {
+					UIkit.notification.closeAll();
+					UIkit.notification(msg);
+					$("#"+id).addClass( "uk-invisible" );
+				});
+			}
+		}
+
+	// Eliminar foto
+		function borrarpdf (id) { 
+			var statusConfirm = confirm("Realmente desea eliminar esto?"); 
+			if (statusConfirm == true) { 
+				$.ajax({
+					method: "POST",
+					url: "modulos/'.$modulo.'/acciones.php",
+					data: { 
+						borrarpdf: 1,
 						id: id
 					}
 				})
@@ -300,43 +364,6 @@ $scripts='
 		}
 	});
 
-	/* Subir imagen de galería
-	$(document).ready(function() {
-		$("#fileuploader").uploadFile({
-			url:"modulos/'.$modulo.'/acciones.php?id='.$id.'",
-			multiple: true,
-			maxFileCount:1000,
-			fileName:"uploadedfile",
-			allowedTypes: "jpeg,jpg",
-			maxFileSize: 6000000,
-			showFileCounter: false,
-			showDelete: "false",
-			showPreview:false,
-			showQueueDiv:true,
-			returnType:"json",
-			onSuccess:function(files,data,xhr){
-				console.log(data);
-				var l = data[0].indexOf(".");
-				var id = data[0].substring(0,l);
-				$("#pics").append("';
-				$scripts.='<div id=\'"+id+"\'>';
-				$scripts.='<div class=\'uk-card uk-card-default uk-card-body uk-text-center\'>';
-				$scripts.='<div>';
-				$scripts.='<a href=\'javascript:borrarfoto(\""+id+"\")\' class=\'uk-icon-button uk-button-danger\' uk-icon=\'trash\'></a>';
-				$scripts.='</div>';
-				$scripts.='<div class=\'uk-margin\' uk-lightbox>';
-				$scripts.='<a href=\''.$rutaFinal.'"+data+"\'>';
-				$scripts.='<img src=\''.$rutaFinal.'"+data+"\' style=\'max-width:200px;\'>';
-				$scripts.='</a>';
-				$scripts.='</div>';
-				$scripts.='</div>';
-				$scripts.='</div>';
-				$scripts.='");';
-				$scripts.='
-			}
-		});
-	});*/
-
 	// Subir imagen redes
 		$(document).ready(function() {
 			$("#fileuploadermain").uploadFile({
@@ -344,13 +371,13 @@ $scripts='
 				fileName:"myfile",
 				maxFileCount:1,
 				showDelete: \'false\',
-				allowedTypes: "jpeg,jpg",
+				allowedTypes: "pdf",
 				maxFileSize: 6291456,
 				showFileCounter: false,
 				showPreview:false,
 				returnType:\'json\',
 				onSuccess:function(data){ 
-					window.location = (\'index.php?rand='.rand(1,1000).'&modulo='.$modulo.'&archivo='.$archivo.'&cat='.$cat.'&id='.$id.'&position=main&filename=\'+data);
+					window.location = ("index.php?rand='.rand(1,1000).'&modulo='.$modulo.'&archivo='.$archivo.'&id='.$id.'&fileuploadermain="+data);
 				}
 			});
 		});

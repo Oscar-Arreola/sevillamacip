@@ -35,7 +35,7 @@
 		$fallo=1;  
 		$legendFail .= "<br>No se pudo modificar la base de datos";
 		foreach ($_POST as $key => $value) {
-			if ($key=='txt' || $key=='claves') {
+			if ($key=='txt' || $key=='txt1' || $key=='claves') {
 				$dato = trim(str_replace("'", "&#039;", $value));
 			}else{
 				$dato = trim(htmlentities($value, ENT_QUOTES));
@@ -211,8 +211,55 @@
 			}			
 		
 	}
+//    Subir foto galería                
+if(isset($_GET["fileuploadermain"])){
+	$rutaInicial = '../library/upload-file/php/uploads/';
+	$rutaFinal = '../img/contenido/'.$modulo.'/';
+
+	$imagenName=$_GET['fileuploadermain'];
+
+	$id=$_GET['id'];
+	
+		
+
+		// Guardar en la base de datos
+		// Verificar que la imagen existe
+		if(!file_exists($rutaInicial.$imagenName)){
+			$fallo=1;
+			$legendFail='<br>No se permite refrescar la página.';
+		} 
+		if (!isset($fallo)) {
+			// Extensión de la imagen
+			$i = strrpos($imagenName,'.');
+			$l = strlen($imagenName) - $i;
+			$ext = strtolower(substr($imagenName,$i+1,$l));
+
+			// Nombre del nuevo archivo
+			$rand=rand(111111111,999999999);
+			$imgFinal=$rand.'.'.$ext;
+			// Si el nombre ya está en usado, definir otro
+			if(file_exists($rutaFinal.$imgFinal)){
+				$imgFinal=$rand.'.'.$ext;
+			}
+
+			if ($actualizar = $CONEXION->query("UPDATE $modulo SET imagen = '$imgFinal' WHERE id = $id")) {
+				$exito=1;
+				// Copiar el archivo a su nueva ubicación
+				copy($rutaInicial.$imagenName, $rutaFinal.$imgFinal);
+				unlink($rutaInicial.$imagenName);
+				}
+				
+		}
+
+			// $sql="UPDATE $modulopic SET (imagen) = ($imgFinal) WHERE id = $id";
+			// $actualizar = $CONEXION->query($sql);
+			
+	
+}
+
+	
 //    Borrar foto galería               
-	if(isset($_POST['borrarfoto'])){
+	if(isset($_POST['borrarpdf'])){
 		include '../../../includes/connection.php';
 		$rutaFinal='../../../img/contenido/'.$modulo.'/';
 		$id=$_POST['id'];
@@ -224,7 +271,7 @@
 						$exito=0;	
 					}else{
 						$exito=1;
-						$borrar = $CONEXION->query("DELETE FROM $modulopic WHERE id = $id");	
+						$borrar = $CONEXION->query("UPDATE $modulo SET imagen = null WHERE id = $id");
 					}
 					
 				}

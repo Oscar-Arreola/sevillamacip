@@ -11,11 +11,11 @@
 </div>
 
 <div class="uk-width-expand margin-top-20">
-	<div uk-grid class="uk-flex-right">
+	<!-- <div uk-grid class="uk-flex-right">
 		<div>
 			<a href="index.php?rand=<?=rand(1,1000)?>&modulo=<?=$modulo?>&archivo=nuevo" class="uk-button uk-button-success"><i uk-icon="icon:plus;ratio:1.4;"></i> &nbsp; Nuevo</a>
 		</div>
-	</div>
+	</div> -->
 </div>
 
 <div class="uk-width-1-1 margin-v-50">

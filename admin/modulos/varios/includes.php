@@ -1,9 +1,9 @@
 <?php
 
-$navegacion[] = array(
+/* $navegacion[] = array(
 	  'title' => 'pedidos',
 	 'modulo' => 'pedidos',
-	   'icon' => 'file-invoice-dollar');
+	   'icon' => 'file-invoice-dollar'); */
 
 $navegacion[] = array(
 	  'title' => 'productos',
@@ -20,31 +20,31 @@ $navegacion[] = array(
 	 'modulo' => 'empresas',
 	   'icon' => 'copyright');
 
-$navegacion[] = array(
+/* $navegacion[] = array(
 	  'title' => 'clientes',
 	 'modulo' => 'clientes',
-	   'icon' => 'users');
+	   'icon' => 'users'); */
 
 $navegacion[] = array(
 	  'title' => 'galerías',
 	 'modulo' => 'galerias',
 	   'icon' => 'border-all');
 
-$navegacion[] = array(
+/* $navegacion[] = array(
 		'title' => 'Servicios',
 	   'modulo' => 'servicios',
-		 'icon' => 'border-all');
+		 'icon' => 'border-all'); */
   
 
 /*$navegacion[] = array(
 	  'title' => 'Imágenes',
 	 'modulo' => 'images',
-	   'icon' => 'images');
+	   'icon' => 'images');*/
 
 $navegacion[] = array(
 	  'title' => 'sucursales',
 	 'modulo' => 'sucursales',
-	   'icon' => 'store-alt');*/
+	   'icon' => 'store-alt'); 
 
 
 

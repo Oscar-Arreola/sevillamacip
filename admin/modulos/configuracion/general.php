@@ -34,7 +34,7 @@ echo '
 					<textarea class="editarajax uk-textarea min-height-150" data-tabla="'.$modulo.'" data-campo="description" data-id="1">'.$rowCONSULTA['description'].'</textarea>
 				</div>
 
-				<div class="padding-v-20">
+				<!--<div class="padding-v-20">
 					<h3>Cuenta de PayPal</h3>
 					<div uk-grid>
 						<div>
@@ -88,11 +88,11 @@ echo '
 							<input type="text" class="editarajax uk-input" data-tabla="'.$modulo.'" data-campo="prodspag" data-id="1" value="'.$rowCONSULTA['prodspag'].'">
 						</div>
 					</div>
-				</div>
+				</div> 
 				<div class="padding-v-20">
 					<h3>Datos para depósito</h3>
 					<textarea class="editarajax uk-textarea min-height-150" data-tabla="'.$modulo.'" data-campo="bank" data-id="1">'.$rowCONSULTA['bank'].'</textarea>
-				</div>
+				</div>-->
 			</div>
 		</div>
 	</div>

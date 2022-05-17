@@ -20,14 +20,14 @@ echo '
 
 			<div class="uk-width-1-3@l margin-v-50 uk-text-left"></div>
 			<div class="uk-width-1-3@l margin-v-50 uk-text-left">
-				<div class="uk-margin">
+				<!--<div class="uk-margin">
 					<div>
 						Titulo seccion 2
 					</div>
 					<div class="uk-width-expand">
 						<input type="text" class="input-text editarajax uk-input" data-tabla="'.$modulo.'" data-campo="txt_t1" data-id="1" value="'.$rowCONSULTA['txt_t1'].'">
 					</div>
-				</div>
+				</div>-->
 			</div>
 			<div class="uk-width-1-3@l margin-v-50 uk-text-left">
 				<div class="uk-margin">
@@ -40,7 +40,7 @@ echo '
 				</div>
 			</div>
 			<div class="uk-width-1-3@l margin-v-50 uk-text-left">
-				Inicio seccion 1
+				Servicios
 				<form action="index.php" method="post">
 					<input type="hidden" name="modulo" value="'.$modulo.'">
 					<input type="hidden" name="editartextosconformato" value="1">
@@ -54,7 +54,7 @@ echo '
 			</div>
 
 			<div class="uk-width-1-3@l margin-v-50 uk-text-left">
-				Inicio seccion 2
+				Texto empresas
 				<form action="index.php" method="post">
 					<input type="hidden" name="modulo" value="'.$modulo.'">
 					<input type="hidden" name="editartextosconformato" value="1">

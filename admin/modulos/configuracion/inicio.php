@@ -1,23 +1,23 @@
 <?php
-$archivoes[] = array(
+/* $archivoes[] = array(
 	  'title' => 'Tallas',
     'archivo' => 'cfgtallaclasif',
-	   'icon' => 'file');
+	   'icon' => 'file'); */
 
-$archivoes[] = array(
+/* $archivoes[] = array(
 	  'title' => 'Colores',
     'archivo' => 'cfgcolores',
-	   'icon' => 'palette');
+	   'icon' => 'palette'); */
 
 /*$archivoes[] = array(
 	  'title' => 'Marcas',
     'archivo' => 'cfgmarcas',
 	   'icon' => 'copyright');*/
 
-$archivoes[] = array(
+/* $archivoes[] = array(
 	  'title' => 'Palabras clave',
     'archivo' => 'cfgclaves',
-	   'icon' => 'key');
+	   'icon' => 'key'); */
 
 /*$archivoes[] = array(
 	  'title' => 'Catálogo',
@@ -29,10 +29,10 @@ $archivoes[] = array(
     'archivo' => 'contacto',
 	   'icon' => 'envelope');
 
-$archivoes[] = array(
+/* $archivoes[] = array(
 	  'title' => 'cupones',
 	'archivo' => 'cupones',
-	   'icon' => 'ticket');
+	   'icon' => 'ticket'); */
 
 $archivoes[] = array(
 	  'title' => 'FAQ',
